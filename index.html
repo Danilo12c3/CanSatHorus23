@@ -1,0 +1,437 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>CanSat23</title> 
+
+</head> 
+
+<body> 
+
+<p style="color:black";"font-family:cursive"><center><H1>CanSat Horus 2023</H1></center></p> 
+
+  
+
+  
+
+  
+
+  
+
+<div class="container"> 
+
+<img src="cansat.png" width="400px" height="500px"> 
+
+<div style=" margin:1% ; height:350px ;width:50%; float:right"> 
+
+    <h2>Definicion</h2> 
+
+    <p>Un CanSat es una simulación de un satélite real, integrado dentro del volumen y la forma de una lata.</p> 
+
+</div> 
+
+</div> 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<table border="1">
+  <p style="color:black"><h2>Índice</h2></p>
+    
+<tr> 
+
+<ul> 
+
+<li><a href="#seccion1"><p style="color:black">	Presentación</p></a></li> 
+<ol> 
+
+<li><a href="#subseccion7"><p style="color:black">Organización y roles del equipo</p></a></li> 
+
+<li><a href="#subseccion8"><p style="color:black">Presentación y Plan de Organización de Equipo</p></a></li> 
+
+</ol> 
+
+<li><a href="#seccion2"><p style="color:black">Misiones</p></a></li> 
+
+    <ol> 
+
+<li><a href="#subseccion1"><p style="color:black">Mision 1</p></a></li> 
+
+<li><a href="#subseccion2"><p style="color:black">Mision 2</p></a></li> 
+
+</ol> 
+
+<li><a href="#seccion3"><p style="color:black">Diseño Mecánico y Estructural</p></a></li> 
+
+    <ol> 
+
+<li><a href="#subseccion3"><p style="color:black">Diseño del Paracaidas</p></a></li> 
+
+<li><a href="#subseccion4"><p style="color:black">Diseño de la Antena</p></a></li> 
+
+</ol> 
+
+<li><a href="#seccion4"><p style="color:black">Planificación y Precio inicial</p></a></li>
+   <ol>
+    <li><a href="#subseccion5"><p style="color:black">Diagrama de Gantt del Proyecto.</p></a></li>
+   </ol>
+</ul> 
+
+</tr> 
+</table>
+  
+</br>
+</br>
+</br>
+</br>
+</br>
+<h2 ><a name="seccion1">Presentación</h2> 
+
+<p>La Agencia Espacial Europea (ESA) apoya y promueve la serie de actividades CanSat en todos sus estados miembros con la mirada puesta en un evento final: la competición CanSat a nivel europeo con competiciones a nivel regional clasificatorias. 
+
+Nuestro equipo está formado por tres alumnos de segundo de bachillerato del instituto Brianda de Mendoza de Guadalajara, hemos diseñado la capsula con las medidas propuestas, con el hardware y software requerido en las especificaciones técnicas del concurso. </p> </br>
+
+  <h3> <a name="subseccion7">Organización y roles del equipo</h3>
+  <p></p>
+  </br>
+  </br>
+  </br>
+  <h3> <a name="subseccion8">Presentación y Plan de Organización de Equipo</h3>
+  <p></p>
+
+<h2> <a name="seccion2">Misiones</h2> 
+
+<p>Hemos seguido la base del concurso y las especificaciones, en las cuales tenemos que medir presión y temperatura, para ello que hemos escogido el sensor BMP 280 que irá conectado a un Arduino Mega mediante la conexión del bus I2/C. </p> 
+
+<div class="container"> 
+
+    <h3> <a name="subseccion1">Mision 1</h3> 
+
+<img src="BMP280.png" width="480px" height="380px"> 
+
+<div style=" margin:1% ; height:350px ;width:50%; float:right"> 
+
+     
+
+   <p>El funcionamiento del bus I2C es el siguiente:</br> 
+
+   Cuando queremos transmitir información de un circuito electrónico (o chip) lo hacemos por medio deel Bus I2C.  
+
+       El protocolo de circuito integrado (I2C) es un protocolo destinado a permitir que varios circuitos integrados digitales «esclavos» («chips») se comuniquen con uno o más chips «maestros». El bus I2C requiere únicamente dos cables para su funcionamiento, uno para la señal de reloj (CLK) y otro para el envío de datos (SDA).   
+
+       En el bus cada dispositivo dispone de una dirección, que se emplea para acceder a los dispositivos de forma individual. Esta dirección puede ser fijada por hardware (en cuyo caso, frecuentemente, se pueden modificar los últimos 3 bits mediante jumpers o interruptores) o totalmente por software. </br> 
+
+       Las especificaciones del sensor son las siguientes: </br> 
+
+   <tr> 
+
+<ul> 
+
+      <li>Digital interfaz de dos cables (I2C) </li> 
+
+      <li>Amplio rango de medición de presión barométrica </li> 
+
+      <li>Ultra-bajo consumo de energía </li> 
+
+      <li>Bajo ruido </li> 
+
+      <li>Completamente calibrado </li> 
+
+      <li>Medición de temperatura incluida </li> 
+
+      <li>Ultraplano y pequeño tamaño </li> 
+
+      <li>Alimentación: 1.8V – 3.6V </li> 
+
+      <li>Rango de medición: 300 – 1100hPa </li> 
+
+      <li>Velocidad del protocolo máxima: 3.4 MHz. </li> 
+
+  
+
+</ul> 
+
+   </tr> 
+
+   </p> 
+
+</div> 
+
+ </br>
+ </br> 
+ </br>
+ </br> 
+<h3> <a name="subseccion2">Mision 2</h3> 
+ <img src="neo.png" width="480px" height="380px"> 
+
+<div style=" margin:1% ; height:350px ;width:50%; float:right"> 
+
+
+<p>La misión secundaria elegida por parte del equipo ha sido incorporar un sensor GPS NEO 6 y un lector de tarjetas microSD y además los datos estarán siendo enviados por radiofrecuencia APC220-43 en todo momento. </br></p>
+
+ Hemos realizado las conexiones que se describen a continuación para el GPX: </br>
+
+<tr> 
+
+<ul> 
+
+      <li>pin 3.3V del Arduino UNO al pin Vcc del módulo GPS. </li> 
+
+      <li>pin GND del Arduino UNO al pin GND del módulo GPS.</li> 
+
+      <li>pin digital 4 del Arduino UNO al pin Tx del módulo GPS. </li> 
+
+      <li>pin digital 3 del Arduino UNO al pin Rx del módulo GPS.  </li> 
+
+</ul> 
+
+   </tr>
+</div>
+</div>
+ </br>
+ </br>
+ </br>
+ </br>
+<div class="container"> 
+
+<img src="sd.png" width="470px" height="380px"> 
+<div style=" margin:1% ; height:350px ;width:50%; float:right"> 
+<p>Los datos serán recogidos en una tarjeta microSD que ira acoplada a la capsula.  </br>
+La comunicación de la memoria es por SPI pero trabajan con 3.3V, para utilizarlo con Arduino necesitamos módulos externos que aparte de tener el socket traen los componentes necesarios para adaptar los voltajes a TTL y poder conectarlo de forma fácil a nuestro Arduino. 
+
+Para este tutorial podemos usar cualquiera de estos dos módulos: 
+
+Modulo Micro SD: nos permite insertar una memoria Micro SD que son las más comunes en el mercado, el modulo se puede alimentar con 3.3V o 5V usando los pines respectivos. </p>
+</div>
+</div>
+
+</br>
+ </br>
+</br>
+ </br> 
+</br>
+ </br> 
+ 
+<div class="container"> 
+
+<img src="antena.png" width="480px" height="380px"> 
+<div style=" margin:1% ; height:350px ;width:50%; float:right">
+ 
+<p>El módulo de conexión inalámbrica es la radio APC220-43</br>
+Este módulo de comunicación inalámbrica tiene la ventaja de ser configurable, mientras que en otros módulos comerciales la frecuencia de oscilación del transmisor y el resonador del receptor estan determinados por el inductor y capacitor usados (valores fijos). Permite ajustar varios parámetros tanto los mencionados, como tener la ventaja de funcionar tanto de transmisor y receptor, permitiendo una comunicación bidireccional.  </p>
+
+ Algunas de las características que posee el módulo son los siguientes:  </br>
+
+<tr> 
+
+<ul> 
+
+      <li> Frecuencia de trabajo: 418 MHz a 455 MHz.  </li> 
+      <li>Alimentación: 3.3V a 5.5V</li> 
+      <li> Corriente consumida: 25 a 35 mA.  </li> 
+      <li>Rango de transmisión: Hasta 1000m (a 2400 bps).  </li>
+      <li>Interfaz de comunicación: UART/TTL  </li>
+      <li>Rango de baudios: 1200 a 19200 bps. </li>
+      <li>Buffer receptor: 256 bytes. </li>
+      <li>Temperatura de trabajo: -20°C a +70°C. </li>
+      <li>Cantidad de canales: Más de 100. </li>
+      <li>Modulación: GFSK. </li>
+      <li>Potencia de señal de salida: 20 mW </li>
+      <li>Los módulos APC220 siempre constan de:  </li>
+      <li> 2 módulos receptor/transmisor APC220  </li>
+      <li>1 convertidor UART/TTL a RS232. </li>
+
+</ul> 
+   </tr>
+  </div>
+</div> 
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+<h2> <a name="seccion3">Diseño Mecánico y Estructural</h2> 
+
+<p>Para diseñar nuestras piezas hemos utilizado el software libre FreeCad : </br>
+
+Diseño preliminar de la cápsula:</br></p> 
+<table border="1"align="center">
+  <div>
+ <tr>
+    <td><center><img src="fotosword10744.png" width="480px" height="380px"></center></td>
+    <td><center><img src="fotosword10746.png" width="480px" height="380px"></center></td>
+	</tr>
+</div>
+</table>
+    
+</br>
+</br>
+
+  
+El resultado en una de las pruebas se encuentra en la siguiente imagen: </br>
+</br>
+</br>
+<table border="1"align="center">
+  <div>
+    <tr>
+      <td><center><img src="foto2.jpg" width="380px" height="380px"></center></td>
+      <td><center><img src="foto3.jpg" width="380px" height="380px"></center></td>
+	</tr>
+    </div>
+</table>
+
+</br>
+</br>
+
+
+   <h3> <a name="subseccion3">Diseño del Paracaídas</h3> 
+
+        <p>Hemos diseñado cuatro paracaídas octogonales utilizando un simulador online.<a href="https://www.translatorscafe.com/cafe/"></a></br> Las velocidades de descenso, que son 5, 6, 8, 10. </p> 
+</br>
+</br>
+
+<table border="1" align="center">
+  <div>
+    <tr>
+      <td><center><img src="paracaidas1.jpg" width="400px" height="380px"></center></td>
+      <td><center><img src="paracaidas2.jpg" width="400px" height="380px"></center></td>
+	</tr>
+    </div>
+</table>
+
+</br>
+</br>
+
+
+<table border="1" align="center">
+  <div>
+    <tr>
+      <td><center><img src="paracaidas3.jpg" width="400px" height="380px"></center></td>
+      <td><center><img src="paracaidas4.jpg" width="400px" height="380px"></center></td>
+	</tr>
+    </div>
+</table>	  
+</br>
+</br>
+<table border="1" align="center">
+  <div>
+    <tr>
+       <td><center><img src="fotosword11361.png" width="380px" height="340px"></center></td>
+       <td><center><img src="paracaidas0.jpg" width="380px" height="340px"></center></td>
+	</tr>
+    </div>
+</table>
+
+</br>
+</br>
+</br>
+</br>
+
+    <h3> <a name="subseccion4">Diseño de la Antena</h3> 
+
+        <p>Hemos diseñado una antena Yagi con un reflector, un irradiante y cinco directores. Para ello nos hemos basado en la siguiente página web <a href="https://www.ecured.cu/Antena_Yagi_Uda">https://www.ecured.cu/Antena_Yagi_Uda</a> </br>
+           Además, hemos utilizado un simulador</p>
+</br>
+</br>
+		   
+<table border="1" align="center">
+  <div>
+    <tr>
+     <td><center><img src="paracaidas.jpg" width="480px" height="300px"></center></td>
+     <td><center><img src="fotosword11664.png" width="480px" height="300px"></center></td>
+</tr>
+    </div>
+</table>
+
+</br>
+</br>
+</br>
+</br>
+
+<table border="1"align="center">
+  <div>
+    <tr>
+     <td><center><img src="fotosword11666.png" width="480px" height="380px"></center></td>
+     <td><center><img src="fotosword11668.png" width="480px" height="380px"></center></td>
+ </tr>
+    </div>
+</table>
+
+</br>
+</br>
+</br>
+</br>
+
+<h2><a name="seccion4">Planificación y Precio inicial</h2>
+</br>
+</br>
+<table border="2" style="background-color:#ffffff">
+<tr>
+  <td><strong>Componentes</strong></td>
+  <td><strong>precio</strong></td>
+  
+</tr>
+
+<tr>
+  <td>Arduino Mega</td>
+  <td>11,69€ </td>
+  
+</tr>
+
+<tr>
+  <td>Sensor BMP280</td>
+  <td>1.44€</td>
+  
+</tr>
+
+<tr>
+  <td>GPS neo6</td>
+  <td>6.43€</td>
+ 
+</tr>
+<tr>
+  <td>APC 220-43 </td>
+  <td>33.83€</td>
+ 
+</tr>
+<tr>
+  <td>Protoshield-Arduino MEGA </td>
+  <td>1.05€</td>
+ 
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>54.44€</td>
+ 
+</tr>
+</table>
+
+<h3> <a name="subseccion5">Diagrama de Gantt del Proyecto.</h3>
+<center><img src="fotosword11895.png" width="600px" height="450px"></center>
+
+
+
+</body> 
+
+</html> 
