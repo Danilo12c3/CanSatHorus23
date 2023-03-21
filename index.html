@@ -563,11 +563,11 @@ void setup() </br>
 
   Serial.begin(9600);//Iniciamos el puerto serie </br>
 
-  Serial.println("CLEARDATA"); // Limpia datos -- Este comando borra solo </br>los datos registrados </br>
+  Serial.println("CLEARDATA"); // Limpia datos -- Este comando borra solo </br> los datos registrados </br>
 
-  Serial.println("CLEARSHEET"); //Limpia hoja -- Este comando borra todos </br>los datos de ActiveSheet (¡incluidas las etiquetas!).</br>  
+  Serial.println("CLEARSHEET"); //Limpia hoja -- Este comando borra todos </br> los datos de ActiveSheet (¡incluidas las etiquetas!).</br>  
 
-Serial.println("LABEL,Fecha,Hora,Segundos,paquete,HORA,FECHA,TEMPERATURA,</br>PRESION,ALTURA,LATITUD,ALTITUD,INSTITUTO"); </br>
+Serial.println("LABEL,Fecha,Hora,Segundos,paquete,HORA,FECHA,TEMPERATURA,</br> PRESION,ALTURA,LATITUD,ALTITUD,INSTITUTO"); </br>
 
   Serial.println("RESETTIMER"); </br>
 
@@ -602,7 +602,7 @@ while ( !Serial ) delay(100);   // wait for native usb </br>
 
     Serial.print("SensorID was: 0x"); Serial.println(bmp.sensorID(),16); </br>
 
-    Serial.print("        ID of 0xFF probably means a bad address, a BMP 180 </br>or BMP 085\n"); </br>
+    Serial.print("        ID of 0xFF probably means a bad address, a BMP 180 </br> or BMP 085\n"); </br>
 
     Serial.print("   ID of 0x56-0x58 represents a BMP 280,\n"); </br>
 
@@ -655,7 +655,7 @@ while ( !Serial ) delay(100);   // wait for native usb </br>
 
       Serial.print(", ");  </br>
 
-      Serial.println(longitude,5);*/  gps.crack_datetime(&year,&month,&day,</br>&hour,&minute,&second,&hundredths); </br>
+      Serial.println(longitude,5);*/  gps.crack_datetime(&year,&month,&day,</br> &hour,&minute,&second,&hundredths); </br>
 
       //Serial.print("Fecha: "); Serial.print(day, DEC); Serial.print("/");  </br>
 
@@ -692,11 +692,11 @@ while ( !Serial ) delay(100);   // wait for native usb </br>
 
      Serial.print(","); </br>
 
-     Serial.print(hour, DEC); Serial.print(":"); Serial.print(minute, DEC); </br>Serial.print(":"); Serial.print(second, DEC);  </br>
+     Serial.print(hour, DEC); Serial.print(":"); Serial.print(minute, DEC); </br> Serial.print(":"); Serial.print(second, DEC);  </br>
 
      Serial.print(","); </br>
 
-     Serial.print(day, DEC); Serial.print("/");Serial.print(month, DEC); </br>Serial.print("/"); Serial.print(year);</br>  
+     Serial.print(day, DEC); Serial.print("/");Serial.print(month, DEC); </br> Serial.print("/"); Serial.print(year);</br>  
 
      Serial.print(","); </br>
 
@@ -734,7 +734,7 @@ while ( !Serial ) delay(100);   // wait for native usb </br>
 
      delay(500); </br>
 
-     //Escribe en columnas paquete, hora, fecha,temperatura, presion, </br>altura, latitud, altitud </br>
+     //Escribe en columnas paquete, hora, fecha,temperatura, presion, </br> altura, latitud, altitud </br>
 
     } </br>
 
@@ -743,7 +743,7 @@ while ( !Serial ) delay(100);   // wait for native usb </br>
   } </br>
 
 void iniciar_SD() </br>
-// procedimiento para inicializar la tarjeta SD y escribir las cabeceras </br>del fichero csv </br>
+// procedimiento para inicializar la tarjeta SD y escribir las cabeceras </br> del fichero csv </br>
 
   { </br>
 
@@ -759,7 +759,7 @@ void iniciar_SD() </br>
 
      if (logFile)  </br>
 
-       {           logFile.println("paquete;HORA;FECHA;TEMPERATURA;PRESION;</br>ALTURA;LATITUD;ALTITUD;INSTITUTO"); </br>
+       {           logFile.println("paquete;HORA;FECHA;TEMPERATURA;PRESION;</br> ALTURA;LATITUD;ALTITUD;INSTITUTO"); </br>
 
           logFile.close(); </br>
 
@@ -781,11 +781,11 @@ void escribirRegistroSD() </br>
 
      logFile.print(";"); </br>
 
-     logFile.print(hour, DEC); logFile.print(":"); logFile.print(minute, DEC); </br>logFile.print(":"); logFile.print(second, DEC);  </br>
+     logFile.print(hour, DEC); logFile.print(":"); logFile.print(minute, DEC); </br> logFile.print(":"); logFile.print(second, DEC);  </br>
 
      logFile.print(";"); </br>
 
-     logFile.print(day, DEC); logFile.print("/");logFile.print(month, DEC); </br>logFile.print("/"); logFile.print(year);  </br>
+     logFile.print(day, DEC); logFile.print("/");logFile.print(month, DEC); </br> logFile.print("/"); logFile.print(year);  </br>
 
      logFile.print(";"); </br>
 
